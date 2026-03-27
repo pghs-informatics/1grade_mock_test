@@ -721,7 +721,7 @@ function buildTop20(){
   top20Inst=new Chart(ctx,{
     type:'line',
     data:{
-      labels:top.map(d=>d.name),
+      labels:top.map(d=>`${d.name} (${d.cls}반)`),
       datasets:[
         makeDS('총점',top.map(d=>d.total),'#f5a623','circle',2.5,true),
         makeDS('국어',top.map(d=>d.kor),'#5b52e8','triangle',2,false),
